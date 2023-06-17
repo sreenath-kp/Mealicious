@@ -15,12 +15,6 @@ const availableCategories = [
     icon: 'assets/icons/north_indian.png',
   ),
   Category(
-    id: 'c3',
-    title: 'Chinese',
-    color: Color.fromARGB(255, 206, 92, 191),
-    icon: 'assets/icons/chinese.png',
-  ),
-  Category(
     id: 'c4',
     title: 'Quick & Easy',
     color: Color.fromARGB(255, 79, 194, 207),
@@ -45,18 +39,6 @@ const availableCategories = [
     icon: 'assets/icons/snacks.png',
   ),
   Category(
-    id: 'c8',
-    title: 'Drinks',
-    color: Color.fromARGB(255, 157, 81, 189),
-    icon: 'assets/icons/drinks.png',
-  ),
-  Category(
-    id: 'c9',
-    title: 'Soups',
-    color: Color.fromARGB(255, 254, 137, 137),
-    icon: 'assets/icons/soups.png',
-  ),
-  Category(
     id: 'c10',
     title: 'Salads',
     color: Color.fromARGB(255, 123, 108, 255),
@@ -67,5 +49,23 @@ const availableCategories = [
     title: 'Italian',
     color: Color.fromARGB(255, 255, 149, 73),
     icon: 'assets/icons/italian.png',
+  ),
+  Category(
+    id: 'c3',
+    title: 'Chinese',
+    color: Color.fromARGB(255, 206, 92, 191),
+    icon: 'assets/icons/chinese.png',
+  ),
+  Category(
+    id: 'c9',
+    title: 'Soups',
+    color: Color.fromARGB(255, 254, 137, 137),
+    icon: 'assets/icons/soups.png',
+  ),
+  Category(
+    id: 'c8',
+    title: 'Drinks',
+    color: Color.fromARGB(255, 157, 81, 189),
+    icon: 'assets/icons/drinks.png',
   ),
 ];

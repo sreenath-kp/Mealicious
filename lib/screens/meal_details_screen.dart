@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:meals/model/meal.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:meals/provider/favourites_provider.dart';
 
-class MealDetails extends StatelessWidget {
-  const MealDetails(
-      {super.key, required this.meal, required this.toggleFavourite});
+class MealDetails extends ConsumerWidget {
+  const MealDetails({super.key, required this.meal});
   final Meal meal;
-  final void Function(Meal) toggleFavourite;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isFavourite = ref.watch(favouritesProvider).contains(meal);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -21,9 +22,9 @@ class MealDetails extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              toggleFavourite(meal);
+              ref.read(favouritesProvider.notifier).toggleFavourites(meal);
             },
-            icon: const Icon(Icons.favorite),
+            icon: Icon(isFavourite ? Icons.favorite : Icons.favorite_border),
           )
         ],
         centerTitle: true,

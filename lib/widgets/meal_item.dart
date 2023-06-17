@@ -5,7 +5,7 @@ import 'package:meals/widgets/meal_item_info.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
-  const MealItem({super.key, required this.meal, required this.toggleFavourite});
+  const MealItem({super.key, required this.meal});
   final Meal meal;
   String get complexityText {
     return meal.complexity.name[0].toUpperCase() +
@@ -16,7 +16,7 @@ class MealItem extends StatelessWidget {
     return meal.affordability.name[0].toUpperCase() +
         meal.affordability.name.substring(1);
   }
-  final void Function(Meal) toggleFavourite;
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -32,7 +32,6 @@ class MealItem extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => MealDetails(
                 meal: meal,
-                toggleFavourite: toggleFavourite,
               ),
             ),
           );
