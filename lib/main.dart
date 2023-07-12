@@ -18,6 +18,9 @@ final darkTheme = ThemeData(
     seedColor: const Color(0xFFD3C8C2),
   ),
   textTheme: GoogleFonts.latoTextTheme(),
+  dialogTheme: DialogTheme(
+      backgroundColor: Colors.brown[700],
+      contentTextStyle: const TextStyle(color: Colors.brown)),
 );
 
 void main() {

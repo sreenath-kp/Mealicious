@@ -21,9 +21,9 @@ class MainDrawer extends StatelessWidget {
                     size: 50, color: Theme.of(context).colorScheme.primary),
                 const SizedBox(width: 30),
                 Text(
-                  'Meals App',
+                  'Mealicious',
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.onSurface,
                         fontWeight: FontWeight.w900,
                       ),
                 ),
@@ -59,7 +59,7 @@ class MainDrawer extends StatelessWidget {
             onTap: () {
               showAboutDialog(
                 context: context,
-                applicationName: 'Meals App',
+                applicationName: 'Mealicious',
                 applicationVersion: '1.0.0',
                 applicationIcon: Icon(Icons.fastfood_sharp,
                     size: 50, color: Theme.of(context).colorScheme.primary),

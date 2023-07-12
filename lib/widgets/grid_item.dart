@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:meals/model/category.dart';
 
 class GridItem extends StatelessWidget {
-  const GridItem(
-      {required this.category, super.key, required this.onSelectCategory});
+  const GridItem({
+    required this.category,
+    super.key,
+    required this.onSelectCategory,
+  });
   final Category category;
   final void Function() onSelectCategory;
 
@@ -35,28 +38,29 @@ class GridItem extends StatelessWidget {
                 category.title,
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: Theme.of(context).colorScheme.onBackground,
-                      fontSize: 20,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
               ),
             ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(80, 10, 10, 10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(1000),
-                boxShadow: [
-                  BoxShadow(
-                    color: category.color,
-                    blurRadius: 0,
-                    offset: const Offset(-12, 5),
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  boxShadow: [
+                    BoxShadow(
+                      color: category.color,
+                      blurRadius: 0,
+                      offset: const Offset(-10, 2),
+                    ),
+                  ],
+                ),
+                child: CircleAvatar(
+                  backgroundColor: Colors.black,
+                  radius: 36,
+                  child: Image.asset(
+                    category.icon,
                   ),
-                ],
-              ),
-              child: CircleAvatar(
-                backgroundColor: Colors.black,
-                radius: 40,
-                child: Image.asset(
-                  category.icon,
                 ),
               ),
             ),

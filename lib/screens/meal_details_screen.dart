@@ -37,6 +37,12 @@ class MealDetails extends ConsumerWidget {
               height: 200,
               width: double.infinity,
               fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) {
+                ScaffoldMessenger.of(context).clearSnackBars();
+                ScaffoldMessenger.of(context)
+                    .showSnackBar(SnackBar(content: Text(error.toString())));
+                return const Icon(Icons.error);
+              },
             ),
             const SizedBox(height: 10),
             Text(

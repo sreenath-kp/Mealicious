@@ -6,8 +6,7 @@ import 'package:meals/screens/meals_screen.dart';
 import 'package:meals/widgets/grid_item.dart';
 
 class CategoryScreen extends StatelessWidget {
-  const CategoryScreen(
-      {super.key, required this.availableMeals});
+  const CategoryScreen({super.key, required this.availableMeals});
   final List<Meal> availableMeals;
 
   void _selectCategory(BuildContext context, Category category) {
@@ -30,9 +29,9 @@ class CategoryScreen extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        crossAxisSpacing: 20,
-        mainAxisSpacing: 20,
-        childAspectRatio: 2 / 2,
+        crossAxisSpacing: 30,
+        mainAxisSpacing: 30,
+        childAspectRatio: 1 / 1,
       ),
       children: [
         for (final category in availableCategories)
