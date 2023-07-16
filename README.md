@@ -1,5 +1,5 @@
 # Mealicious
-## A flutter app where you can look for recipies of diffferent categories of food recipies 
+## A flutter app where you can look for food recipies of diffferent categories.
 
 <table>
   <tr>
